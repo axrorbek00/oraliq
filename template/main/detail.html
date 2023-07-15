@@ -1,0 +1,32 @@
+{% extends 'leyauts/base.html' %}
+
+{% block content %}
+    <div class="">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Davlat</th>
+                <th scope="col">Poytaxt</th>
+                <th scope="col">Prezident</th>
+                <th scope="col">Axoli soni</th>
+                <th scope="col">Mustaqiligi</th>
+            </tr>
+            </thead>
+            {% for i in obj %}
+                <tbody>
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td><a href="{% url 'poytaxt' i.pk %}">{{ i.d_name }}</a></td>
+                    <td>{{ i.poytaxt }}</td>
+                    <td>{{ i.president }}</td>
+                    <td>{{ i.aholi_soni }}</td>
+                    <td>{{ i.mustaqilligi }}</td>
+                </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+
+    </div>
+{% endblock %}

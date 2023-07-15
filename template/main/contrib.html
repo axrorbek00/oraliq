@@ -1,0 +1,25 @@
+{% extends 'leyauts/base.html' %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Davlati</th>
+            <th scope="col">Poytaxt</th>
+            <th scope="col">Prezident</th>
+            <th scope="col">Aholi soni</th>
+            <th scope="col">Mustaqiligi</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ asd.d_name }}</td>
+            <td>{{ obj1.p_name }}</td>
+            <td>{{ asd.president }}</td>
+            <td>{{ asd.aholi_soni }}</td>
+            <td>{{ asd.mustaqilligi }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
